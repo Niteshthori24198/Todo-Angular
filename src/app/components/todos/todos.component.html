@@ -1,0 +1,11 @@
+<app-add-todo
+(onAddTodo)="onAdd($event)"
+></app-add-todo>
+<div class="border h-80 overflow-y-auto py-6 mx-6">
+  <app-todo-item
+    *ngFor="let todo of todos"
+    [todo]="todo"
+    (onDeleteTodo)="onDelete($event)"
+    (onToggleReminder)="onToggle($event)"
+  ></app-todo-item>
+</div>

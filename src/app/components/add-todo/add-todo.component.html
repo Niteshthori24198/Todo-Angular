@@ -1,0 +1,32 @@
+<div class="py-6 px-4 mx-6" *ngIf="showAddTodo">
+  <h2 class="text-xl font-semibold mb-4">Add Todo</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="mb-4">
+      <input
+        type="text"
+        id="text"
+        name="text"
+        class="w-full border rounded-md p-2"
+        required
+        placeholder="Add Todo"
+        [(ngModel)]="text"
+      />
+    </div>
+    <div class="mb-4">
+      <input
+        type="checkbox"
+        id="reminder"
+        name="reminder"
+        class="mr-2"
+        [(ngModel)]="reminder"
+      />
+      <label for="reminder">Remind me</label>
+    </div>
+    <button
+      type="submit"
+      class="bg-black text-white py-2 px-4 rounded-md w-full"
+    >
+      Add Todo
+    </button>
+  </form>
+</div>

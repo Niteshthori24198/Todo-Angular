@@ -1,0 +1,8 @@
+<header class="flex justify-between items-baseline mb-20 px-10 py-5 border">
+  <h1 class="text-4xl font-bold first-letter:text-6xl">Todos</h1>
+  <app-button
+    color="{{ !showAddTodo ? '#000' : 'red' }}"
+    text="{{ !showAddTodo ? 'Create Todo' : 'Close' }}"
+    (btnClick)="toggleAddTodo()"
+  ></app-button>
+</header>

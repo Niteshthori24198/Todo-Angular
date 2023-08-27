@@ -1,0 +1,17 @@
+<div
+  class="bg-slate-100 my-2 mx-auto max-w-xl p-4 cursor-pointer hover:bg-slate-200 transition duration-300 ease-in-out select-none"
+  [ngClass]="
+    todo.reminder ? 'border-l-4 border-green-500' : 'border-l-4 border-red-500'
+  "
+  (dblclick)="onToggle(todo)"
+>
+  <h3 class="text-lg font-bold text-gray-700 flex justify-between">
+    {{ todo.text }}
+    <fa-icon
+      class="text-red-500 cursor-pointer font-bold text-2xl"
+      [icon]="faTimes"
+      (click)="onDelete(todo)"
+    ></fa-icon>
+  </h3>
+  <p class="text-sm text-gray-500">{{ todo.day }}</p>
+</div>
